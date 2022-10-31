@@ -1,4 +1,4 @@
-const mongoURI = mongoURI = "mongodb+srv://cp3005411:lucas1997@cluster0.5kbti7i.mongodb.net/?retryWrites=true&w=majority"
+const mongoURI = "mongodb+srv://cp3005411:lucas1997@cluster0.5kbti7i.mongodb.net/?retryWrites=true&w=majority"
 const { MongoClient } = require('mongodb');
 require('dotenv').config();
 
