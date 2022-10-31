@@ -1,9 +1,5 @@
 const MoviesModel = require("../models/moviesModel");
 const Joi = require("joi");
-const supertest = require('supertest');
-
-
-
 module.exports = class MoviesController {
 
    static async getMovies(req, res, next) {

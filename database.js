@@ -3,7 +3,7 @@ const { MongoClient, ObjectId } = require('mongodb');
 require('dotenv').config();
 
 async function main() {
-  const client = new MongoClient("mongodb+srv://cp3005411:lucas1997@cluster0.5kbti7i.mongodb.net/?retryWrites=true&w=majority");
+  const client = new MongoClient('mongodb+srv://cp3005411:lucas1997@cluster0.5kbti7i.mongodb.net/?retryWrites=true&w=majority');
   try {
     await client.connect();
     // await listDatabases(client);
