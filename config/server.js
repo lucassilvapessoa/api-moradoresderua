@@ -10,8 +10,8 @@ app.use(express.static('./public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.listen(port, function () {
-	console.log('Servidor rodando com express na porta', port);
-});
+app.listen(process.env.PORT || port, function(){
+	console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });
 
 module.exports = app;
