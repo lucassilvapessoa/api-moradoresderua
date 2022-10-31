@@ -3,9 +3,6 @@ const Movies = require("../controllers/moviesController");
 
 module.exports = {
   getMovies: (app) => {
-    app.get('/',Movies.getMovies);
-  },
-  getMovies: (app) => {
     app.get('/api/filmes',Movies.getMovies);
   },
   postMovie:(app) =>{
