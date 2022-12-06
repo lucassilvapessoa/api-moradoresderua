@@ -1,5 +1,5 @@
-const app = require('./config/server');
-const routes = require('./app/routes/routes');
+const app = require('./src/config/server')
+const routes = require('./src/app/routes/routes');
 const express = require("express")
 const bodyParser = require('body-parser');
 const { ReadPreference } = require('mongodb');
