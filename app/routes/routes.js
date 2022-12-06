@@ -1,20 +1,29 @@
 const { get } = require("mongoose");
-const Movies = require("../controllers/moviesController");
+const Moradores = require("../controllers/MoradorDeRuaController");
 
 module.exports = {
-  getMovies: (app) => {
-    app.get('/api/filmes',Movies.getMovies);
+  getMoradorDeRua: (app) => {
+    app.get('/api/moradores',Moradores.getMoradores);
   },
-  postMovie:(app) =>{
-    app.post('/api/filmes', Movies.postMovie);
+  postMoradorDeRua:(app) =>{
+    app.post('/api/moradores', Moradores.postMorador);
   },
-  getMovieById:(app) =>{
-     app.get('/api/filmes/:id', Movies.selectMovieById)
+  getMoradorDeRuaPorId:(app) =>{
+     app.get('/api/moradores/:id', Moradores.getMoradorPorId)
   },
-  updateMovieById:(app) =>{
-    app.put('/api/filmes/:id', Movies.updateMovieById)
+  atualizarMoradorDeRuaPorId:(app) =>{
+    app.put('/api/moradores/:id', Moradores.atualizarMoradorPorId)
   },
-  deleteMovieById:(app) =>{
-    app.delete('/api/filmes/:id', Movies.deleteMovieById)
-  }
+  deletarMoradorDeRuaPorId:(app) =>{
+    app.delete('/api/moradores/:id', Moradores.deletarMoradorPorId)
+  },
+
+  autenticarUsuario:(app) =>{
+   app.post('/api/autenticarusuario', Moradores.autenticarUsuario);
+  },
+  
+  criarUsuario:(app) =>{
+    app.post('/api/cadastrarusuario', Moradores.criarUsuario);
+  },
+
 }
